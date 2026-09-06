@@ -3,11 +3,6 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from typing import Literal
 
-# Provenance of the user-supplied production archive from which this benchmark
-# productization pass started. Git commit is the preferred public identifier.
-IMPORTED_SOURCE_ARCHIVE_SHA256 = "b284fb1d3bb219b183aca9b3bda8f2de8cb6ed2072b188c93dd01137d250c496"
-
-
 @dataclass(frozen=True, slots=True)
 class MazeCase:
     name: str
