@@ -57,7 +57,7 @@ def render(input_json: Path, output_svg: Path) -> None:
 
     fig.tight_layout()
     output_svg.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(output_svg, bbox_inches="tight")
+    fig.savefig(output_svg, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
 

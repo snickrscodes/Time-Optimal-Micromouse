@@ -181,7 +181,7 @@ def main() -> int:
                    bbox_to_anchor=(0.5, 0.075))
     fig.tight_layout(rect=(0.0, 0.115, 1.0, 0.93))
     comparison_svg = args.output_dir / "red_comet_astar_vs_historical.svg"
-    fig.savefig(comparison_svg, bbox_inches="tight")
+    fig.savefig(comparison_svg, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     # Compact supporting evidence: all ten simple topologies from the exhaustive run.
@@ -214,7 +214,7 @@ def main() -> int:
     ax.legend(frameon=False)
     fig.tight_layout()
     topology_svg = args.output_dir / "red_comet_topology_summary.svg"
-    fig.savefig(topology_svg, bbox_inches="tight")
+    fig.savefig(topology_svg, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     # Final A* active-basis geometry.
@@ -232,7 +232,7 @@ def main() -> int:
     ax.set_title(f"Final A* active-basis trajectory · {astar.time:.3f} s")
     fig.tight_layout()
     geometry_svg = args.output_dir / "red_comet_astar_geometry.svg"
-    fig.savefig(geometry_svg, bbox_inches="tight")
+    fig.savefig(geometry_svg, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     # Final A* speed profile and real-time playback use the persisted DD/yaw trace.
@@ -248,7 +248,7 @@ def main() -> int:
     axes[0].set_title(f"Final A* speed profile · T={astar.time:.6f} s")
     fig.tight_layout()
     speed_svg = args.output_dir / "red_comet_astar_speed.svg"
-    fig.savefig(speed_svg, bbox_inches="tight")
+    fig.savefig(speed_svg, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     playback = build_playback_trace(astar.raw_parameters, astar.initial_state, astar_speed, fps=args.fps)

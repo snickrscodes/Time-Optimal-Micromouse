@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+from PIL import Image
 
 
 def _plt():
@@ -11,6 +12,23 @@ def _plt():
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     return plt
+
+
+def _save_figure(fig, path: Path, *, dpi: int = 160) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(path, dpi=dpi, facecolor="white", edgecolor="white", transparent=False)
+    if path.suffix.lower() == ".png":
+        image = Image.open(path)
+        try:
+            if image.mode in {"RGBA", "LA"} or (image.mode == "P" and "transparency" in image.info):
+                white = Image.new("RGB", image.size, (255, 255, 255))
+                alpha = image.getchannel("A") if "A" in image.getbands() else None
+                white.paste(image.convert("RGB"), mask=alpha) if alpha is not None else white.paste(image.convert("RGB"))
+                white.save(path)
+            elif image.mode != "RGB":
+                image.convert("RGB").save(path)
+        finally:
+            image.close()
 
 
 def topology_plot(data: dict[str, Any], path: Path) -> None:
@@ -26,7 +44,7 @@ def topology_plot(data: dict[str, Any], path: Path) -> None:
     ax.set_xticks(x, names); ax.set_ylabel("Certified traversal time (s)")
     ax.set_title("Shortest-distance topology vs kinodynamic topology search")
     ax.legend(); ax.grid(True, axis="y", alpha=0.25); fig.tight_layout()
-    path.parent.mkdir(parents=True, exist_ok=True); fig.savefig(path, dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 def bounds_plot(data: dict[str, Any], path: Path) -> None:
@@ -44,7 +62,7 @@ def bounds_plot(data: dict[str, Any], path: Path) -> None:
     ax.set_xticks(x,["basic","+ two-sided","+ 12-dir","+ eroded cover"])
     ax.set_ylim(bottom=0); ax.set_title("Lower-bound hierarchy: tightness and pruning")
     ax.legend(); ax.grid(True, alpha=0.25); fig.tight_layout()
-    path.parent.mkdir(parents=True, exist_ok=True); fig.savefig(path,dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 def gradients_plot(data: dict[str, Any], path: Path) -> None:
@@ -58,7 +76,7 @@ def gradients_plot(data: dict[str, Any], path: Path) -> None:
     ax.set_xlabel("Relative error"); ax.set_ylabel("Coordinates")
     ax.set_title("5-point finite-difference gradient spot checks")
     ax.grid(True,alpha=0.25); fig.tight_layout()
-    path.parent.mkdir(parents=True,exist_ok=True); fig.savefig(path,dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 def warm_plot(data: dict[str, Any], path: Path) -> None:
@@ -74,7 +92,7 @@ def warm_plot(data: dict[str, Any], path: Path) -> None:
         ax.bar(x+(i-1.5)*width,vals,width,label=v)
     ax.set_xticks(x,[r.replace("cyclic_4x4_","") for r in routes]); ax.set_ylabel("Certified final time (s)")
     ax.set_title("Warm-start ablation"); ax.legend(fontsize=8); ax.grid(True,axis="y",alpha=0.25); fig.tight_layout()
-    path.parent.mkdir(parents=True,exist_ok=True); fig.savefig(path,dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 def native_plot(data: dict[str, Any], path: Path) -> None:
@@ -86,7 +104,7 @@ def native_plot(data: dict[str, Any], path: Path) -> None:
     fig,ax=plt.subplots(figsize=(9,4.8)); ax.bar(x-width/2,py,width,label="Python"); ax.bar(x+width/2,na,width,label="Native")
     ax.set_xticks(x,names); ax.set_ylabel("Median time+gradient evaluation (ms)")
     ax.set_title("Reverse-solver backend performance"); ax.legend(); ax.grid(True,axis="y",alpha=.25); fig.tight_layout()
-    path.parent.mkdir(parents=True,exist_ok=True); fig.savefig(path,dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 def resolution_plot(data: dict[str, Any], path: Path) -> None:
@@ -96,7 +114,7 @@ def resolution_plot(data: dict[str, Any], path: Path) -> None:
     fig,ax=plt.subplots(figsize=(8,4.8)); ax.bar(x-width/2,n,width,label="N"); ax.bar(x+width/2,n2,width,label="2N")
     ax.set_xticks(x,names); ax.set_ylabel("Certified traversal time (s)"); ax.set_title("Resolution sensitivity")
     ax.legend(); ax.grid(True,axis="y",alpha=.25); fig.tight_layout()
-    path.parent.mkdir(parents=True,exist_ok=True); fig.savefig(path,dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 
@@ -121,7 +139,7 @@ def direct_transcription_plot(data: dict[str, Any], path: Path) -> None:
     ax.legend(title="Maze")
     ax.grid(True,alpha=.25)
     fig.tight_layout()
-    path.parent.mkdir(parents=True,exist_ok=True); fig.savefig(path,dpi=160); plt.close(fig)
+    _save_figure(fig, path, dpi=160); plt.close(fig)
 
 
 def generate_all(output_dir: Path, plots_dir: Path) -> dict[str, str]:

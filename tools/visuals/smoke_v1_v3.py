@@ -73,7 +73,7 @@ def main() -> None:
     draw_solution(axes[0], maze, astar, title="Optimized A* topology")
     draw_solution(axes[1], maze, best, title="Optimized B&B topology")
     fig.tight_layout()
-    fig.savefig(args.output_dir / "v1_comparison.svg", bbox_inches="tight")
+    fig.savefig(args.output_dir / "v1_comparison.svg", bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     # V2: body/corridor geometry layers on the B&B route.
@@ -97,7 +97,7 @@ def main() -> None:
     )
     ax.set_title("V2 development geometry layers")
     fig.tight_layout()
-    fig.savefig(args.output_dir / "v2_geometry_detail.svg", bbox_inches="tight")
+    fig.savefig(args.output_dir / "v2_geometry_detail.svg", bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     # V3: exact scalar topology + presentation time trace.
@@ -119,7 +119,7 @@ def main() -> None:
         f"quadrature error={trace.integration_error:.2e}s"
     )
     fig.tight_layout()
-    fig.savefig(args.output_dir / "v3_speed_profile.svg", bbox_inches="tight")
+    fig.savefig(args.output_dir / "v3_speed_profile.svg", bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     summary = {

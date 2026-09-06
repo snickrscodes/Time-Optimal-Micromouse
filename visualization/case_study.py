@@ -263,7 +263,7 @@ def render_astar_vs_bnb_case_study(
         figure.legend(by_label.values(), by_label.keys(), loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, 0.04), fontsize=8.5)
     figure.tight_layout(rect=(0.015, 0.075, 0.985, 0.92), w_pad=1.25)
     output.parent.mkdir(parents=True, exist_ok=True)
-    figure.savefig(output, dpi=dpi, bbox_inches="tight")
+    figure.savefig(output, dpi=dpi, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     if show:
         plt.show()
     else:

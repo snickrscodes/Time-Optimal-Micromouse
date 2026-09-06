@@ -114,14 +114,14 @@ def main():
     draw_search_tree(ax, events)
     fig.tight_layout()
     search_path = args.output_dir / "v6_search_tree.svg"
-    fig.savefig(search_path, bbox_inches="tight")
+    fig.savefig(search_path, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     fig, ax = plt.subplots(figsize=(8, 7))
     draw_system_architecture(ax)
     fig.tight_layout()
     architecture_path = args.output_dir / "v7_architecture.svg"
-    fig.savefig(architecture_path, bbox_inches="tight")
+    fig.savefig(architecture_path, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(fig)
 
     generated_events = sum(e.kind == "generated" for e in events)

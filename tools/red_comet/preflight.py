@@ -126,7 +126,7 @@ def _render_gallery(path: Path, *, scenario: Any, records: list[dict[str, Any]],
     figure.suptitle("Red Comet maze · every simple start→goal topology under no-revisit policy", fontsize=13)
     figure.tight_layout(rect=(0, 0, 1, 0.96))
     path.parent.mkdir(parents=True, exist_ok=True)
-    figure.savefig(path, bbox_inches="tight")
+    figure.savefig(path, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     plt.close(figure)
 
 

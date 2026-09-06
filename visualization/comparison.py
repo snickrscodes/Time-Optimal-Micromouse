@@ -99,7 +99,7 @@ def render_comparison(
         figure.legend(handles, labels, loc="lower center", ncol=min(4, len(handles)), frameon=False)
     figure.tight_layout(rect=(0.0, 0.06, 1.0, 0.92))
     output.parent.mkdir(parents=True, exist_ok=True)
-    figure.savefig(output, dpi=dpi, bbox_inches="tight")
+    figure.savefig(output, dpi=dpi, bbox_inches="tight", facecolor="white", edgecolor="white", transparent=False)
     if show:
         plt.show()
     else:
