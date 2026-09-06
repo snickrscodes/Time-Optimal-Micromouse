@@ -1,6 +1,6 @@
 {
   "format": "ame-maze-v1",
-  "name": "Micromouse maze 01 \u2014 user reference image",
+  "name": "Micromouse maze 01: APEC 2016",
   "dimensions": {
     "width": 16,
     "height": 16
@@ -81,7 +81,6 @@
     "cell_pitch_units": 15.0
   },
   "metadata": {
-    "source": "user-provided maze image in ChatGPT conversation",
-    "notes": "Transcribed from the first user-provided image. The blue/green route overlays and the S/G labels were treated as annotations, not walls."
+    "source": "http://micromouseusa.com/wp-content/uploads/2016/03/APEC-2016-with-path.jpg"
   }
 }

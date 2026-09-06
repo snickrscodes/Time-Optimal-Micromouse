@@ -1,6 +1,6 @@
 {
   "format": "ame-maze-v1",
-  "name": "Red Comet reference maze \u2014 user reference image",
+  "name": "Red Comet reference maze: All-Japan 2017 Finals",
   "dimensions": {
     "width": 16,
     "height": 16
@@ -81,7 +81,6 @@
     "cell_pitch_units": 15.0
   },
   "metadata": {
-    "source": "user-provided maze image in ChatGPT conversation",
-    "notes": "Transcribed from the third user-provided image, which the user identifies as the famous maze run by Red Comet. Colored dashed route overlays and the gray 2x2 goal shading were treated as annotations, not walls."
+    "source": "https://micromouseonline.com/wp-content/uploads/2017/11/japan-2017-finals-maze-D5A.png"
   }
 }
