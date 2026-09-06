@@ -1,0 +1,62 @@
+{
+  "format": "ame-maze-v1",
+  "name": "Loader example 4x4",
+  "dimensions": {
+    "width": 4,
+    "height": 4
+  },
+  "coordinates": {
+    "origin": "southwest"
+  },
+  "start": {
+    "cell": [
+      1,
+      0
+    ],
+    "heading": "north"
+  },
+  "goals": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "goal_policy": "single_entry",
+  "require_all_cells_reachable": false,
+  "walls": {
+    "row_order": "north_to_south",
+    "horizontal": [
+      "1111",
+      "1111",
+      "1001",
+      "1011",
+      "1111"
+    ],
+    "vertical": [
+      "11111",
+      "11011",
+      "11011",
+      "11111"
+    ]
+  },
+  "scale": {
+    "unit_mm": 12.0,
+    "wall_thickness_units": 1.0,
+    "cell_pitch_units": 15.0
+  },
+  "metadata": {
+    "purpose": "format example"
+  }
+}

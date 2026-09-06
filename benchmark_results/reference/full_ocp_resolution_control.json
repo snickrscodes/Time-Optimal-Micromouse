@@ -1,0 +1,75 @@
+{
+  "base_structured": {
+    "certified": true,
+    "segments": 11,
+    "time_seconds": 1.1713553788696385
+  },
+  "case": "cyclic_4x4_s007",
+  "fine_resolution_summary": {
+    "exact_44_to_99_start_time_seconds": 1.1534012152654578,
+    "first_99_segment_transaction_gain_seconds": -1.3835288470431806e-10,
+    "first_99_segment_transaction_time_seconds": 1.153401215127105,
+    "hybrid_replay_time_seconds": 1.1312737938810717,
+    "hybrid_replay_vs_structured_percent": -1.9184496215044033,
+    "ocp_intervals": 96,
+    "ocp_objective_time_seconds": 1.137372894074094,
+    "ocp_vs_structured_percent": -1.389657028516711,
+    "structured_gain_vs_11_percent": -1.5327682841956403,
+    "structured_gain_vs_11_seconds": -0.017954163742533558,
+    "structured_segments": 99,
+    "structured_time_seconds": 1.153401215127105
+  },
+  "method": {
+    "claim_boundary": "All results are certified local solutions. This control isolates representation resolution more strongly; it does not prove either formulation globally optimal.",
+    "comparison": "OCP objective and production continuous hybrid replay on the OCP-discovered geometry are reported separately.",
+    "ocp": "Fresh cold-start CasADi/IPOPT simultaneous geometry+speed solves at 24/48/96 intervals from the canonical Benchmark 8 campaign.",
+    "structured_refinement": "Exact multilevel prolongation/resegmentation 11 -> 22 -> 44 -> 99, with every new geometry DOF free inside deterministic local trust transactions. The previously certified trajectory is retained as incumbent; faster near-feasible candidates are projected and independently re-certified."
+  },
+  "purpose": "Post-campaign fairness control for Benchmark 8. Re-optimize exactly prolonged structured trajectories before comparing with the fresh simultaneous OCP meshes.",
+  "release_interpretation": "After multilevel structured reoptimization, the 99-segment structured control reaches 1.153401215 s. The 96-interval OCP objective is 1.3897% lower, and production hybrid replay on the OCP geometry is 1.9184% lower. The remaining gap is therefore better interpreted as local-basin/formulation behavior than insufficient clothoid resolution.",
+  "rows": [
+    {
+      "hybrid_replay_minus_structured_seconds": -0.013819707119550717,
+      "hybrid_replay_time": 1.1405200456589093,
+      "hybrid_replay_vs_structured_percent": -1.197195807065221,
+      "level": "coarse",
+      "ocp_intervals": 24,
+      "ocp_minus_structured_seconds": 0.009779326637989305,
+      "ocp_objective_time": 1.1641190794164493,
+      "ocp_vs_structured_percent": 0.847179230763806,
+      "structured_improvement_from_11_percent": -1.4526442101284953,
+      "structured_improvement_from_11_seconds": -0.01701562609117846,
+      "structured_segments": 22,
+      "structured_time": 1.15433975277846
+    },
+    {
+      "hybrid_replay_minus_structured_seconds": -0.018589426057661118,
+      "hybrid_replay_time": 1.1348117892077987,
+      "hybrid_replay_vs_structured_percent": -1.611705086801274,
+      "level": "medium",
+      "ocp_intervals": 48,
+      "ocp_minus_structured_seconds": -0.0063772831857336065,
+      "ocp_objective_time": 1.1470239320797262,
+      "ocp_vs_structured_percent": -0.5529110860409414,
+      "structured_improvement_from_11_percent": -1.5327682723841218,
+      "structured_improvement_from_11_seconds": -0.017954163604178675,
+      "structured_segments": 44,
+      "structured_time": 1.1534012152654598
+    },
+    {
+      "hybrid_replay_minus_structured_seconds": -0.022127421246033174,
+      "hybrid_replay_time": 1.1312737938810717,
+      "hybrid_replay_vs_structured_percent": -1.9184496215044033,
+      "level": "fine",
+      "ocp_intervals": 96,
+      "ocp_minus_structured_seconds": -0.016028321053010997,
+      "ocp_objective_time": 1.137372894074094,
+      "ocp_vs_structured_percent": -1.389657028516711,
+      "structured_improvement_from_11_percent": -1.5327682841956403,
+      "structured_improvement_from_11_seconds": -0.017954163742533558,
+      "structured_segments": 99,
+      "structured_time": 1.153401215127105
+    }
+  ],
+  "schema": "full-ocp-resolution-control-v1"
+}

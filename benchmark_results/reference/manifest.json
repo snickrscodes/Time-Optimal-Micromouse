@@ -1,0 +1,207 @@
+{
+  "benchmark": "manifest",
+  "environment": {
+    "active_reverse_backend": null,
+    "casadi": "3.7.2",
+    "compilers": {
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "cxx": "c++ (Debian 14.2.0-19) 14.2.0"
+    },
+    "cpu": {
+      "logical_count": 5,
+      "model": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "ipopt_plugin": "not_probed",
+    "native_artifacts": [
+      {
+        "exists": true,
+        "path": "native/cflow/libcflow.so",
+        "sha256": "7ae5d226aded2e5325b52e0cdf96d9f340c9fb3955000fa45218d331c7482dbe"
+      },
+      {
+        "exists": true,
+        "path": "native/reverse_eta/libreverse_eta.so",
+        "sha256": "8ead731e102e7b4521b0a331624b279a2331ef749466d3199809b3ccf841e941"
+      },
+      {
+        "exists": true,
+        "path": "native/segment/libame_segment.so",
+        "sha256": "c4efd842311ce1a54c65c693690b124c1ad072107be13085c9f71149c0aa342d"
+      },
+      {
+        "exists": true,
+        "path": "native/crossing/libame_crossing.so",
+        "sha256": "5fe7fa84fbae90414628cce78b8745a1a37bc1de228df382cfd09bbedee296d8"
+      },
+      {
+        "exists": true,
+        "path": "native/reverse/libame_reverse.so",
+        "sha256": "4df1c65b03a1db34503674e418c2bde3f4f5283d9fc2628f2bfa72a9fc474bbf"
+      }
+    ],
+    "numpy": "2.3.5",
+    "optimization_config": null,
+    "os": {
+      "machine": "x86_64",
+      "release": "6.18.35",
+      "system": "Linux",
+      "version": "#1 SMP Mon Aug 31 18:10:37 UTC 2026"
+    },
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "provenance": {
+      "git_branch": null,
+      "git_commit": null,
+      "git_dirty": null,
+      "imported_source_archive_sha256": "b284fb1d3bb219b183aca9b3bda8f2de8cb6ed2072b188c93dd01137d250c496",
+      "source_kind": "tree_sha256",
+      "source_tree_sha256": "19c2fbf7a37b4912bf5d2f9bc40b7e109bfa80e89bc7b9e003077853ed8309d6"
+    },
+    "python": {
+      "executable": "/opt/pyvenv/bin/python",
+      "implementation": "CPython",
+      "version": "3.13.5"
+    },
+    "scipy": "1.17.0",
+    "thread_environment": {},
+    "timestamp_utc": "2026-09-03T23:15:53.835835+00:00"
+  },
+  "numerical_profile": "core",
+  "plots": {
+    "direct_transcription": "benchmark_results/reference/plots/direct_transcription.png",
+    "gradients": "benchmark_results/reference/plots/gradients.png",
+    "lower_bounds": "benchmark_results/reference/plots/lower_bounds.png",
+    "native_stack": "benchmark_results/reference/plots/native_stack.png",
+    "resolution": "benchmark_results/reference/plots/resolution.png",
+    "topology_search": "benchmark_results/reference/plots/topology_search.png",
+    "warm_start": "benchmark_results/reference/plots/warm_start.png"
+  },
+  "profile": "all",
+  "reference_run": true,
+  "report": "benchmark_results/reference/BENCHMARK_REPORT.md",
+  "report_sha256": "ca0bb901710e26e0d80fbfba811f40b498971e5e65cced3aeefe173eb5734800",
+  "requested_suites": [],
+  "resolved_suites": [
+    "topology_search",
+    "lower_bounds",
+    "gradients",
+    "warm_start",
+    "native_stack",
+    "resolution",
+    "direct_transcription",
+    "full_ocp",
+    "full_ocp_sensitivity"
+  ],
+  "run_id": "reference",
+  "runs": [
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/topology_search.json",
+      "public_title": "Benchmark 1 \u2014 Shortest-distance A* topology vs kinodynamic topology search",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "2cb0eae84c65f427b10d938823cca56f0fc0a527fff368ef5ef2dc540e28f9a1",
+      "suite": "topology_search",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/lower_bounds.json",
+      "public_title": "Benchmark 2 \u2014 Lower-bound admissibility, tightness, and pruning",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "cb6b0ce73b60ecf36490b4b8fb9096bbba49bf3ed724d994a7f03a4e74053417",
+      "suite": "lower_bounds",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/gradients.json",
+      "public_title": "Benchmark 3 \u2014 Speed-profile gradient correctness",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "93ac7317a0dbbe5cd0676bee1bc35afc97154d1ea794b0d68ed47f6314928628",
+      "suite": "gradients",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/warm_start.json",
+      "public_title": "Benchmark 4 \u2014 Geometry optimizer and warm-start ablation",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "dc2cdffcd1e5a3f1d0701cf8e4048fcbb9a1051b4b5cacab65d9880ce8c96feb",
+      "suite": "warm_start",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/native_stack.json",
+      "public_title": "Benchmark 5 \u2014 Native C/C++ stack performance and equivalence",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "c5fa987844fc94203e5a04a6518787e876b39699a427c6deb387ac8e55e8d700",
+      "suite": "native_stack",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/resolution.json",
+      "public_title": "Benchmark 6 \u2014 Parameterization/resolution sensitivity",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "0e352abbcbb13ac653f05c3734714890392a68b4e2c0c83d59d2e5ec7a2efcaf",
+      "suite": "resolution",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/direct_transcription.json",
+      "public_title": "Benchmark 7 \u2014 Fixed-geometry direct-transcription baseline",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "f3806883fcfddf3caad9489d0ca31603deb735f1ffc4730a372d530e9af46c19",
+      "suite": "direct_transcription",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/full_ocp.json",
+      "public_title": "Benchmark 8 \u2014 Simultaneous fixed-topology OCP baseline",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "0af92fd5e80d856307bdff990951fe20ee053fcb4336db121f6aa62df330f81a",
+      "suite": "full_ocp",
+      "tier": "official"
+    },
+    {
+      "completion_marker_seen": null,
+      "forced_teardown": false,
+      "orchestration_wall_seconds": 0.0,
+      "output": "benchmark_results/reference/full_ocp_sensitivity.json",
+      "public_title": "Benchmark 8S \u2014 Cross-topology OCP sensitivity",
+      "returncode": 0,
+      "reused": true,
+      "sha256": "4819918bebd79cc95cc1502d041dc14db0c2f1aa1db8a426b1603161f9068e19",
+      "suite": "full_ocp_sensitivity",
+      "tier": "supplemental"
+    }
+  ],
+  "schema_version": 1,
+  "status": "complete"
+}

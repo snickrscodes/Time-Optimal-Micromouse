@@ -1,0 +1,108 @@
+{
+  "build": "C11; -O3 -Wall -Wextra -Wpedantic -ffp-contract=fast; hidden visibility; section GC; no -ffast-math",
+  "generated_files": {
+    "generated/core_coeffs.c": "b62be08d52854edbcf91882b3cca0dc881cf7e6cfbe7229a7b3e2854e31ba78c",
+    "generated/core_coeffs.h": "591dbc8887030bd9df593b0954730d1d42fa1c9d8f842ee49b9af564da1fcc5f",
+    "generated/farfield_coeffs.c": "8a4bb4d9671da71f4aa537988c8fe6ab9209f3dc6b709d2c7df7c037cd5f4ae4",
+    "generated/farfield_coeffs.h": "2618533383298f0603e108c3e630902532d1f4a72038746dbbe7ef60c51ca43e",
+    "generated/highz_coeffs.c": "a934a243a7e8aa411ca9109c5458f781da366a8f2a696dc3896a7afdca176aa7",
+    "generated/highz_coeffs.h": "80078da62b85dac5efaa17fc8069315f18b5c47ba08faca564432a37a6743111",
+    "generated/highz_face_tables.c": "ca4a746fe6390c5fa552cf83389c0bd28a80238ce8710e5f4f2627558763e331",
+    "generated/highz_face_tables.h": "f67164a513a183f6a42894bda19a323c1865f60edbe4331430865fd543c8774c",
+    "generated/highz_tucker_coeffs.c": "b3042cac199d1443ad522a367b54223cbfb6f764675ad52860299fccfb5046d5",
+    "generated/highz_tucker_coeffs.h": "d2dd9faba02736849f569fd3d32cd815a81cf61ce3aef0a75628d9306074b692",
+    "generated/integral_tables.c": "3ff806e90284576c16ebf7adec657dab4337dc14ff1b739bdcdc6afb8c79cea9",
+    "generated/integral_tables.h": "f889fe83e887bb8bbc1df4f9b43147d71f1f94b4db2383da3720acfa908aff0a",
+    "generated/quadrature.c": "aa77b1db2bd385b4942d6831766e961ad7e991291846fe27f90e3d7613c60589",
+    "generated/quadrature.h": "b5de7db50905eac93d39105e10085873ef4d16567c2058c6a29f67149f9ae049"
+  },
+  "generation_tools": {
+    "tools/generate_highz_face_tables.py": "4745776979869a32a7a3500708de1f99743bdac519dd702dcd7a78e6b7f2e25d"
+  },
+  "phase_iv_archive_sha256": "1f8c2832a1352030530ae494fb9d911d4ec6b6041a88d7f1ce55a81360f94c99",
+  "phase_v_application_archive_sha256": "5969f13070fca490b111a56bf75901ec006b2d14c9677ce0ee0eb168aaba0c03",
+  "phase_vi_application_archive_sha256": "31de2b85e5e1bfd4e74e3bec1b2124a6bcd67c65b525617a3e1a9af83de0b851",
+  "phase_vi_runtime_source_digest": "f1d4c8e39ce14c00fe92c936ab20151c5737134883156a1953f075aef85fb36a",
+  "phase_vi_runtime_source_digest_algorithm": "sha256 of sorted relative_path\\0file_sha256\\n over include/src/generated C/H files plus Makefile",
+  "phase_viia_application_archive_sha256": "013869b6772aff2e9a61ee31b6a8c1562e6b993c995a27b526dd1c1e0df76ced",
+  "phase_viia_policy": "C: no runtime separatrix snapping; asymptotics retained only for scale-aware conditioning analysis",
+  "phase_viia_runtime_source_digest": "65b639a0499f0c9c7394d5b197f973626f757ef49e2b15f095fec31802b35894",
+  "phase_viia_runtime_source_digest_algorithm": "sha256 of sorted relative_path\\0file_sha256\\n over include/src/generated C/H files plus Makefile",
+  "public_symbols": [
+    "cflow_eval",
+    "cflow_eval_jacobian",
+    "cflow_integral_value",
+    "cflow_integral_jacobian",
+    "cflow_eval_all",
+    "cflow_first_event",
+    "cflow_boundary_eval",
+    "cflow_boundary_eval_jacobian",
+    "cflow_boundary_integral_value",
+    "cflow_boundary_integral_jacobian",
+    "cflow_boundary_eval_all"
+  ],
+  "runtime_dependencies": [
+    "C runtime",
+    "libm"
+  ],
+  "separatrix_conditioning": {
+    "asymptotic_min_abs_v": 3.0,
+    "endpoint_x_uncertainty_limit": 1e-12,
+    "expanding_only": true,
+    "normalized_tube": "rho_sep = abs(eta-eta_sep)/eta_sep; eta=1+sign(b)*q*X",
+    "runtime_snap": false,
+    "transverse_gain": "Phi(v)=v^4+5*log|v|+3/(2*v^4)-87/(32*v^8)",
+    "uncertainty_safety_factor": 4.0
+  },
+  "v11_core_cross_api_scale_alignment": {
+    "algorithmic_cost_change": "none",
+    "change": "use CFLOW_CORE_RSTAR*CFLOW_CORE_RSTAR, matching the scalar-authoritative recurrence, instead of the adjacent binary64 literal 0.04",
+    "purpose": "preserve scalar/Jacobian authoritative endpoint-state identity after roundoff-level face specialization changes",
+    "scope": "Jacobian core endpoint-state polynomial recurrence only"
+  },
+  "v11_face_tucker_runtime_source_digest": "3c1653d99e0a38a57c1fcc0a981aa4aedd0809854fdb1ed76a877c34ecc74618",
+  "v11_face_tucker_runtime_source_digest_algorithm": "sha256 of sorted relative_path\\0file_sha256\\n over include/src/generated C/H files plus Makefile",
+  "v11_face_tucker_specialization": {
+    "dispatch": "explicit internal enum from the active high-z step cap; no floating-point face proximity test",
+    "eligible_step": "accepted maximal high-z step only; public-horizon truncation, other-chart winners, and shorter quadrature substeps use full interior evaluators",
+    "endpoint_representation": "direct 2-D Chebyshev value and normal-derivative surfaces reconstructed from the shipped Tucker endpoint polynomial",
+    "faces": [
+      "C+",
+      "C-",
+      "s+",
+      "s-"
+    ],
+    "generation": "100 decimal digits from exact binary64 source coefficients, round once to binary64 hex literals",
+    "integral_representation": "measured hybrid: direct 2-D faces for mid/upper; precontracted Tucker face cores for near (6,4,4)",
+    "interior_maps_unchanged": true,
+    "jacobian_face_kernel": "fused value/tangential plus normal 2-D contraction for direct surfaces; fused low-rank contractions for near integral faces",
+    "physical_refit": false,
+    "public_abi_changed": false,
+    "runtime_disable_switch": "CFLOW_DISABLE_HIGHZ_FACE_SPECIALIZATION",
+    "safety_coordinate": 0.985
+  },
+  "v11_host_archive_sha256": "bbff7ee972d9835e4aaa490e7c71ee681e9d385ae62268e2baf3b4fb7d4875cc",
+  "v11_host_final_tested_source": "52f918f61e189ec08ed1c1e780a158471fa90c88",
+  "v11_tucker_endpoint_compression": {
+    "mid_ranks": [
+      12,
+      7,
+      8
+    ],
+    "near_ranks": [
+      10,
+      6,
+      7
+    ],
+    "other_cflow_numerics_changed": false,
+    "scope": "high-z endpoint map only; dense high-z derivative retained for integral defect/correction path",
+    "upper_ranks": [
+      11,
+      7,
+      8
+    ]
+  },
+  "v11_tucker_runtime_source_digest": "00702f836f6703514a380c13e35815aac9e1f71a71c76f8800510b2241221532",
+  "v11_tucker_runtime_source_digest_algorithm": "sha256 of sorted relative_path\\0file_sha256\\n over include/src/generated C/H files plus Makefile",
+  "viib_runtime_modification": "none: Phase VIIA numerical Cflow sources/generated data copied unchanged; VIIB changes are application integration only"
+}

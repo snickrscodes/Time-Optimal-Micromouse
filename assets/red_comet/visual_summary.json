@@ -1,0 +1,14 @@
+{
+  "schema": "red-comet-release-visuals-v2",
+  "source": "analysis/red_comet_2017/final_result.json",
+  "astar_time_seconds": 7.7446749806008865,
+  "historical_green_time_seconds": 8.66606458947581,
+  "comparison_svg": "assets/red_comet/red_comet_astar_vs_historical.svg",
+  "topology_svg": "assets/red_comet/red_comet_topology_summary.svg",
+  "geometry_svg": "assets/red_comet/red_comet_astar_geometry.svg",
+  "speed_svg": "assets/red_comet/red_comet_astar_speed.svg",
+  "hero_gif": "assets/red_comet/red_comet_astar_hero.gif",
+  "side_by_side_gif": "assets/red_comet/red_comet_astar_vs_green_side_by_side.gif",
+  "playback_frames": 156,
+  "historical_green_playback_frames": 175
+}

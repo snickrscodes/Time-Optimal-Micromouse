@@ -1,0 +1,3 @@
+# Generic optimal-control baselines. CasADi wheels bundle the IPOPT plugin used here.
+-r requirements-benchmarks.txt
+casadi==3.7.2

@@ -1,0 +1,46 @@
+{
+  "cases": {
+    "cyclic_4x4_s019": {
+      "ocp": [
+        {
+          "error": null,
+          "mesh": 28,
+          "output": "full_ocp_sensitivity_cyclic_4x4_s019_ocp28.json",
+          "status": "success"
+        },
+        {
+          "error": null,
+          "mesh": 56,
+          "output": "full_ocp_sensitivity_cyclic_4x4_s019_ocp56.json",
+          "status": "success"
+        }
+      ],
+      "structured": {
+        "error": null,
+        "output": "full_ocp_sensitivity_cyclic_4x4_s019_structured_ref2.json",
+        "status": "success"
+      }
+    },
+    "cyclic_4x4_s043": {
+      "ocp": [
+        {
+          "error": null,
+          "mesh": 16,
+          "output": "full_ocp_sensitivity_cyclic_4x4_s043_ocp16.json",
+          "status": "success"
+        },
+        {
+          "error": null,
+          "mesh": 32,
+          "output": "full_ocp_sensitivity_cyclic_4x4_s043_ocp32.json",
+          "status": "success"
+        }
+      ],
+      "structured": {
+        "error": null,
+        "output": "full_ocp_sensitivity_cyclic_4x4_s043_structured_ref2.json",
+        "status": "success"
+      }
+    }
+  }
+}

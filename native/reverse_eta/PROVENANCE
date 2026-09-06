@@ -1,0 +1,30 @@
+{
+  "algebraic_eta_report_sha256": "94cf21802e45149d8f04cb30d768e1f9382aed6ef39c2489acc86617679e57e9",
+  "base_release_archive_sha256": "a28a43c2bcbeb61471d411ae970813b22e0e8a58c9222c3baad0a61221b55a35",
+  "build_policy": "-O3 -ffp-contract=fast -fno-fast-math; hidden visibility except ame_reverse_eta_all",
+  "compiler_qualification": [
+    "GCC production build",
+    "Clang 17 focused reverse/Cflow subset"
+  ],
+  "component": "reverse-only factored-eta regularized tangent cocycle",
+  "coordinate": "eta=tan(delta)=sqrt(1-(Qx)^2)/(Qx), Q=|q|, B=|b|",
+  "disable_switch": "AME_ROBOT_DISABLE_REVERSE_ETA=1 before import",
+  "native_language": "C11",
+  "numerical_method": "long-double 3-stage Radau IIA; full-vs-two-half adaptive estimator; log homogeneous multiplier; affine/integral cocycle",
+  "public_cflow_abi_changed": false,
+  "public_status_authority_changed": false,
+  "relative_tolerance": 1e-12,
+  "research_bundle_sha256": "2e1fda3d45eb217e29398d8b6fd675ce821b3423cbfe1359b37d34356482873f",
+  "research_v2_equivalence": "production C11 kernel is bit-identical in all returned numeric fields and adaptive work counts on 655/655 broad research cases",
+  "runtime_dependencies": [
+    "C runtime",
+    "libm"
+  ],
+  "runtime_source_digest": "bb32c3ffe8e890918a47f01f46180884b4106bee151b5c392b0873acada8181d",
+  "runtime_source_digest_algorithm": "sha256 of sorted relative_path\\0file_sha256\\n over reverse_eta.c, reverse_eta.h, Makefile",
+  "sanitizers": "Clang ASan+UBSan randomized native driver PASS",
+  "scalar_topology_authority_changed": false,
+  "scope": "fixed-topology reverse time replay only",
+  "selector": "sign-stable contracting branch, no boundary start, N_asym>=3000, eta0<=30",
+  "tangent_cocycle_report_sha256": "381ebc3d73951fe112902231bb493fec9a32bd3f8a39acc5523df4857db1759c"
+}

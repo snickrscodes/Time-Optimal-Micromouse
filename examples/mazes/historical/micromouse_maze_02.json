@@ -1,0 +1,87 @@
+{
+  "format": "ame-maze-v1",
+  "name": "Micromouse maze 02 \u2014 user reference image",
+  "dimensions": {
+    "width": 16,
+    "height": 16
+  },
+  "coordinates": {
+    "origin": "southwest"
+  },
+  "start": {
+    "cell": [
+      0,
+      0
+    ],
+    "heading": "north"
+  },
+  "goals": [
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "goal_policy": "single_entry",
+  "require_all_cells_reachable": true,
+  "walls": {
+    "row_order": "north_to_south",
+    "horizontal": [
+      "1111111111111111",
+      "0100110001101100",
+      "0011001010011010",
+      "0011010001101000",
+      "0100001100000110",
+      "0001100111010000",
+      "0110010100001010",
+      "0001100010100000",
+      "1010110000001010",
+      "0001101110111100",
+      "0110011011000011",
+      "1000110010101100",
+      "0101001100010010",
+      "0000110011101100",
+      "0010011000110000",
+      "0001100110110110",
+      "1111111111111111"
+    ],
+    "vertical": [
+      "11000000000001001",
+      "11010101101000011",
+      "10000101101010011",
+      "11010100001010101",
+      "11001001011100101",
+      "10101011010101011",
+      "10001011001001011",
+      "11100001011010101",
+      "11100111010110101",
+      "10001010101101011",
+      "10100000011010001",
+      "11010101011011011",
+      "11010001000010011",
+      "10100100010100001",
+      "11101010100001111",
+      "11000000000100001"
+    ]
+  },
+  "scale": {
+    "unit_mm": 12.0,
+    "wall_thickness_units": 1.0,
+    "cell_pitch_units": 15.0
+  },
+  "metadata": {
+    "source": "user-provided maze image in ChatGPT conversation",
+    "notes": "Transcribed from the second user-provided image. Colored dashed route overlays and the gray 2x2 goal shading were treated as annotations, not walls."
+  }
+}

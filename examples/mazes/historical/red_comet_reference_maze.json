@@ -1,0 +1,87 @@
+{
+  "format": "ame-maze-v1",
+  "name": "Red Comet reference maze \u2014 user reference image",
+  "dimensions": {
+    "width": 16,
+    "height": 16
+  },
+  "coordinates": {
+    "origin": "southwest"
+  },
+  "start": {
+    "cell": [
+      0,
+      0
+    ],
+    "heading": "north"
+  },
+  "goals": [
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "goal_policy": "single_entry",
+  "require_all_cells_reachable": true,
+  "walls": {
+    "row_order": "north_to_south",
+    "horizontal": [
+      "1111111111111111",
+      "0001111111111001",
+      "0100110011000110",
+      "0100001100111100",
+      "0111111111110010",
+      "0000000000001100",
+      "0011111111111010",
+      "0100010010001010",
+      "0010100001111010",
+      "0001010110001110",
+      "0110111111111100",
+      "0011000000001010",
+      "0100110110100100",
+      "0011001001010110",
+      "0001101111100000",
+      "0100011111111110",
+      "1111111111111111"
+    ],
+    "vertical": [
+      "11000000000000001",
+      "10110001000101101",
+      "10011010101010011",
+      "10010100010001011",
+      "11010100100101011",
+      "11101011011010011",
+      "11010010001010011",
+      "11011011010100011",
+      "11101011011000011",
+      "11010010000100011",
+      "11001011011001011",
+      "11010100100111011",
+      "11010111011010011",
+      "11100100100111001",
+      "10111100000001111",
+      "11000000000000001"
+    ]
+  },
+  "scale": {
+    "unit_mm": 12.0,
+    "wall_thickness_units": 1.0,
+    "cell_pitch_units": 15.0
+  },
+  "metadata": {
+    "source": "user-provided maze image in ChatGPT conversation",
+    "notes": "Transcribed from the third user-provided image, which the user identifies as the famous maze run by Red Comet. Colored dashed route overlays and the gray 2x2 goal shading were treated as annotations, not walls."
+  }
+}

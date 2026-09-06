@@ -1,0 +1,1756 @@
+{
+  "aggregate": {
+    "all_end_to_end_certified": true,
+    "end_to_end_cases": 2,
+    "maximum_absolute_gradient_error": 0.0,
+    "maximum_end_to_end_time_difference": 0.0,
+    "maximum_time_value_absolute_error": 0.0,
+    "median_end_to_end_speedup": 1.182788059009782,
+    "median_scalar_speedup": 2.182234332448969,
+    "median_time_gradient_speedup": 1.7141471402261188,
+    "micro_cases": 4
+  },
+  "benchmark": "native_stack",
+  "end_to_end_optimizations": [
+    {
+      "final_time_absolute_difference": 0.0,
+      "maximum_parameter_absolute_difference": 0.0,
+      "name": "cyclic_4x4_s007",
+      "native": {
+        "architecture": "legacy_v9",
+        "certified": true,
+        "constraint_calls": 116,
+        "corridor_upper_bound": -8.173587444293418e-05,
+        "endpoint_error": 7.752687380957468e-12,
+        "exchange_rounds": 4,
+        "final_time": 1.4645125117629274,
+        "gradient_calls": 46,
+        "iterations": 44,
+        "message": "continuous geometry certified but the scaled KKT tolerance was not met",
+        "objective_calls": 166,
+        "optimizer_backends": [
+          "scipy-slsqp"
+        ],
+        "parameters": [
+          0.5945276087997635,
+          -0.28527245679206625,
+          0.7996924245525685,
+          2.0953437108893596,
+          0.9678742685772742,
+          4.3055505620855055,
+          1.1216966419375287,
+          2.206975005331654,
+          1.3772613243416423,
+          0.4575914053642705,
+          2.5544838312854754,
+          -0.09550987094876996,
+          2.7889085414216956,
+          -2.096606201195908,
+          2.9213707070484936,
+          -4.142766204146587,
+          3.050404677325004,
+          -2.211846737300863,
+          3.22406570677687,
+          -0.2533114290263992,
+          3.441465170191965,
+          0.022499762031464036
+        ],
+        "selected_stage": "time_optimized",
+        "selected_stage_kkt_stationarity_inf": 0.32857432683206145,
+        "success": true,
+        "wall_seconds": 1.0934239980006168
+      },
+      "policy": "legacy_v9",
+      "python": {
+        "architecture": "legacy_v9",
+        "certified": true,
+        "constraint_calls": 116,
+        "corridor_upper_bound": -8.173587444293418e-05,
+        "endpoint_error": 7.752687380957468e-12,
+        "exchange_rounds": 4,
+        "final_time": 1.4645125117629274,
+        "gradient_calls": 46,
+        "iterations": 44,
+        "message": "continuous geometry certified but the scaled KKT tolerance was not met",
+        "objective_calls": 166,
+        "optimizer_backends": [
+          "scipy-slsqp"
+        ],
+        "parameters": [
+          0.5945276087997635,
+          -0.28527245679206625,
+          0.7996924245525685,
+          2.0953437108893596,
+          0.9678742685772742,
+          4.3055505620855055,
+          1.1216966419375287,
+          2.206975005331654,
+          1.3772613243416423,
+          0.4575914053642705,
+          2.5544838312854754,
+          -0.09550987094876996,
+          2.7889085414216956,
+          -2.096606201195908,
+          2.9213707070484936,
+          -4.142766204146587,
+          3.050404677325004,
+          -2.211846737300863,
+          3.22406570677687,
+          -0.2533114290263992,
+          3.441465170191965,
+          0.022499762031464036
+        ],
+        "selected_stage": "time_optimized",
+        "selected_stage_kkt_stationarity_inf": 0.32857432683206145,
+        "success": true,
+        "wall_seconds": 1.3522145609995277
+      },
+      "wall_speedup_python_over_native": 1.2366790590586296
+    },
+    {
+      "final_time_absolute_difference": 0.0,
+      "maximum_parameter_absolute_difference": 0.0,
+      "name": "cyclic_4x4_s019",
+      "native": {
+        "architecture": "legacy_v9",
+        "certified": true,
+        "constraint_calls": 281,
+        "corridor_upper_bound": 7.998934847819328e-12,
+        "endpoint_error": 3.3855585002129374e-11,
+        "exchange_rounds": 4,
+        "final_time": 1.517307304808726,
+        "gradient_calls": 85,
+        "iterations": 82,
+        "message": "continuous geometry certified but the scaled KKT tolerance was not met",
+        "objective_calls": 369,
+        "optimizer_backends": [
+          "scipy-slsqp"
+        ],
+        "parameters": [
+          0.548981252275831,
+          -0.13980353596709683,
+          0.8326292209707862,
+          2.4753722114676924,
+          0.9515121184208746,
+          4.973535733694571,
+          1.0607050175204409,
+          2.6732008050207776,
+          1.4408820153262645,
+          0.04245411356402704,
+          1.7432643005894473,
+          -2.520614013030734,
+          1.8325079844218892,
+          -4.690255367247183,
+          1.9311734428167,
+          -2.634506994448312,
+          2.378526985450207,
+          -0.1895471939978183,
+          2.6332839648200466,
+          2.132715481748378,
+          2.7072314564966775,
+          4.149728094980413,
+          2.7808843209998075,
+          2.6579067662621734,
+          3.0106253395688856,
+          0.766477496068615,
+          3.1931038916896606,
+          -0.008714019295797362
+        ],
+        "selected_stage": "time_feasibility_polish",
+        "selected_stage_kkt_stationarity_inf": 2.6999272635202402e-05,
+        "success": true,
+        "wall_seconds": 2.1815033040002163
+      },
+      "policy": "legacy_v9",
+      "python": {
+        "architecture": "legacy_v9",
+        "certified": true,
+        "constraint_calls": 281,
+        "corridor_upper_bound": 7.998934847819328e-12,
+        "endpoint_error": 3.3855585002129374e-11,
+        "exchange_rounds": 4,
+        "final_time": 1.517307304808726,
+        "gradient_calls": 85,
+        "iterations": 82,
+        "message": "continuous geometry certified but the scaled KKT tolerance was not met",
+        "objective_calls": 369,
+        "optimizer_backends": [
+          "scipy-slsqp"
+        ],
+        "parameters": [
+          0.548981252275831,
+          -0.13980353596709683,
+          0.8326292209707862,
+          2.4753722114676924,
+          0.9515121184208746,
+          4.973535733694571,
+          1.0607050175204409,
+          2.6732008050207776,
+          1.4408820153262645,
+          0.04245411356402704,
+          1.7432643005894473,
+          -2.520614013030734,
+          1.8325079844218892,
+          -4.690255367247183,
+          1.9311734428167,
+          -2.634506994448312,
+          2.378526985450207,
+          -0.1895471939978183,
+          2.6332839648200466,
+          2.132715481748378,
+          2.7072314564966775,
+          4.149728094980413,
+          2.7808843209998075,
+          2.6579067662621734,
+          3.0106253395688856,
+          0.766477496068615,
+          3.1931038916896606,
+          -0.008714019295797362
+        ],
+        "selected_stage": "time_feasibility_polish",
+        "selected_stage_kkt_stationarity_inf": 2.6999272635202402e-05,
+        "success": true,
+        "wall_seconds": 2.4626926639994053
+      },
+      "wall_speedup_python_over_native": 1.1288970589609344
+    }
+  ],
+  "environment": {
+    "active_reverse_backend": "native",
+    "casadi": "3.7.2",
+    "compilers": {
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "cxx": "c++ (Debian 14.2.0-19) 14.2.0"
+    },
+    "cpu": {
+      "logical_count": 5,
+      "model": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "ipopt_plugin": "not_probed",
+    "native_artifacts": [
+      {
+        "exists": true,
+        "path": "native/cflow/libcflow.so",
+        "sha256": "7ae5d226aded2e5325b52e0cdf96d9f340c9fb3955000fa45218d331c7482dbe"
+      },
+      {
+        "exists": true,
+        "path": "native/reverse_eta/libreverse_eta.so",
+        "sha256": "8ead731e102e7b4521b0a331624b279a2331ef749466d3199809b3ccf841e941"
+      },
+      {
+        "exists": true,
+        "path": "native/segment/libame_segment.so",
+        "sha256": "c4efd842311ce1a54c65c693690b124c1ad072107be13085c9f71149c0aa342d"
+      },
+      {
+        "exists": true,
+        "path": "native/crossing/libame_crossing.so",
+        "sha256": "5fe7fa84fbae90414628cce78b8745a1a37bc1de228df382cfd09bbedee296d8"
+      },
+      {
+        "exists": true,
+        "path": "native/reverse/libame_reverse.so",
+        "sha256": "4df1c65b03a1db34503674e418c2bde3f4f5283d9fc2628f2bfa72a9fc474bbf"
+      }
+    ],
+    "numpy": "2.3.5",
+    "optimization_config": {
+      "body_height": 0.4444444444444444,
+      "body_length": 0.5555555555555556,
+      "class_time_pilot_iterations": 6,
+      "corridor_mode": "overlapping_cover",
+      "curvature_iterations": 20,
+      "curvature_regularization": 0.0,
+      "curvature_slope_limit": 50.0,
+      "domain_scan": 32,
+      "envelope_scan": 16,
+      "feasibility_tolerance": 2e-07,
+      "geometry_refinement": 1,
+      "init_w": 0.8,
+      "length_curvature_regularization": 1e-05,
+      "length_iterations": 20,
+      "maximum_exchange_rounds": 3,
+      "n_scan": 32,
+      "time_iterations": 20
+    },
+    "os": {
+      "machine": "x86_64",
+      "release": "6.18.35",
+      "system": "Linux",
+      "version": "#1 SMP Mon Aug 31 18:10:37 UTC 2026"
+    },
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "provenance": {
+      "git_branch": null,
+      "git_commit": null,
+      "git_dirty": null,
+      "imported_source_archive_sha256": "b284fb1d3bb219b183aca9b3bda8f2de8cb6ed2072b188c93dd01137d250c496",
+      "source_kind": "tree_sha256",
+      "source_tree_sha256": "19c2fbf7a37b4912bf5d2f9bc40b7e109bfa80e89bc7b9e003077853ed8309d6"
+    },
+    "python": {
+      "executable": "/opt/pyvenv/bin/python",
+      "implementation": "CPython",
+      "version": "3.13.5"
+    },
+    "scipy": "1.17.0",
+    "thread_environment": {},
+    "timestamp_utc": "2026-09-03T23:00:23.437414+00:00"
+  },
+  "microbenchmarks": [
+    {
+      "dimension": 22,
+      "maximum_absolute_gradient_error": 0.0,
+      "maximum_relative_gradient_error": 0.0,
+      "name": "cyclic_4x4_s007",
+      "native": {
+        "gradient": [
+          0.34801417824065656,
+          0.004356691896925469,
+          0.37582111450531436,
+          0.0015584807084838698,
+          0.2617876205609218,
+          -7.40825708138459e-05,
+          2.2552152573488566,
+          -0.000592889387769781,
+          0.34936303757017795,
+          -0.01820296723241471,
+          0.336779472653453,
+          -0.047743646208972944,
+          0.47133071036474566,
+          -0.007209773469108585,
+          1.7302691753381174,
+          -0.0005743065724354249,
+          1.7823076626647913,
+          -0.0002834847955701259,
+          0.41944591851282964,
+          -0.001116342106368916,
+          0.41944591851282964,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 1,
+            "microseconds_per_call": 1683.5039996294654,
+            "seconds": 0.0016835039996294654
+          },
+          "native_reverse_sweep": {
+            "count": 1,
+            "microseconds_per_call": 550.2680005520233,
+            "seconds": 0.0005502680005520233
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 2781.938999760314,
+            "seconds": 0.002781938999760314
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "gradient_time_value": 1.2336779726425662,
+        "scalar_diagnostics": {
+          "envelope_intervals": 17,
+          "integrand_evaluations": 34,
+          "integration_seconds": 0.0004962270004398306,
+          "scalar_passes": 6,
+          "scalar_segments": 25,
+          "topology_seconds": 0.0029476580002665287
+        },
+        "scalar_median_seconds": 0.0032378159994550515,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 2933.7369996937923,
+            "seconds": 0.0029337369996937923
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 17,
+            "microseconds_per_call": 29.189823555284153,
+            "seconds": 0.0004962270004398306
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "scalar_value": 1.2336779726425662,
+        "time_gradient_median_seconds": 0.005016173000512936
+      },
+      "python": {
+        "gradient": [
+          0.34801417824065656,
+          0.004356691896925469,
+          0.37582111450531436,
+          0.0015584807084838698,
+          0.2617876205609218,
+          -7.40825708138459e-05,
+          2.2552152573488566,
+          -0.000592889387769781,
+          0.34936303757017795,
+          -0.01820296723241471,
+          0.336779472653453,
+          -0.047743646208972944,
+          0.47133071036474566,
+          -0.007209773469108585,
+          1.7302691753381174,
+          -0.0005743065724354249,
+          1.7823076626647913,
+          -0.0002834847955701259,
+          0.41944591851282964,
+          -0.001116342106368916,
+          0.41944591851282964,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 4,
+            "microseconds_per_call": 13.910999996369355,
+            "seconds": 5.564399998547742e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 342,
+            "microseconds_per_call": 0.3794970729763413,
+            "seconds": 0.0001297879989579087
+          },
+          "differentiable_replay_constructions": {
+            "count": 17,
+            "microseconds_per_call": 2.6981176287175486,
+            "seconds": 4.5867999688198324e-05
+          },
+          "domain_scan_evaluations": {
+            "count": 342,
+            "microseconds_per_call": 3.2605906528781907,
+            "seconds": 0.0011151220032843412
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 39,
+            "microseconds_per_call": 9.887435902410056,
+            "seconds": 0.00038561000019399216
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 6,
+            "microseconds_per_call": 84.69766665560503,
+            "seconds": 0.0005081859999336302
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 6,
+            "microseconds_per_call": 7.671499740051028,
+            "seconds": 4.602899844030617e-05
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 29,
+            "microseconds_per_call": 2.4578965418060825,
+            "seconds": 7.127899971237639e-05
+          }
+        },
+        "gradient_time_value": 1.2336779726425662,
+        "scalar_diagnostics": {
+          "envelope_intervals": 17,
+          "integrand_evaluations": 34,
+          "integration_seconds": 0.0004893559998890851,
+          "scalar_passes": 6,
+          "scalar_segments": 25,
+          "topology_seconds": 0.006617103999815299
+        },
+        "scalar_median_seconds": 0.00689342000077886,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 4,
+            "microseconds_per_call": 13.936250070401002,
+            "seconds": 5.574500028160401e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 342,
+            "microseconds_per_call": 0.3189707696723768,
+            "seconds": 0.00010908800322795287
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 342,
+            "microseconds_per_call": 3.2457280574509078,
+            "seconds": 0.0011100389956482104
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 39,
+            "microseconds_per_call": 9.920820561185396,
+            "seconds": 0.00038691200188623043
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 17,
+            "microseconds_per_call": 28.785647052299122,
+            "seconds": 0.0004893559998890851
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 29,
+            "microseconds_per_call": 2.6459656196650405,
+            "seconds": 7.673300297028618e-05
+          }
+        },
+        "scalar_value": 1.2336779726425662,
+        "time_gradient_median_seconds": 0.009047864000422123
+      },
+      "raw_parameters": [
+        0.5366673111776772,
+        1.0479678660426388,
+        0.3409068734284998,
+        4.4732901220814885,
+        0.013285681620452294,
+        27.952017983609903,
+        0.014342236880710013,
+        -46.86073439189802,
+        0.43070017657071225,
+        -1.7663892175222355,
+        1.1315845312539345,
+        -1.4686496477958622,
+        0.2001235452454413,
+        -4.811539322819875,
+        0.019012324300557548,
+        -45.60467354756366,
+        0.009915843326318452,
+        -47.376882495600185,
+        0.3039752123658297,
+        5.56895625712508,
+        0.12398756786252463,
+        8.512324099460667
+      ],
+      "scalar_speedup": 2.129033892580392,
+      "time_gradient_speedup": 1.8037384275815291,
+      "time_value_absolute_error": 0.0
+    },
+    {
+      "dimension": 28,
+      "maximum_absolute_gradient_error": 0.0,
+      "maximum_relative_gradient_error": 0.0,
+      "name": "cyclic_4x4_s019",
+      "native": {
+        "gradient": [
+          0.33790960331658554,
+          0.015043488629589923,
+          0.597533834037783,
+          0.007210597214474876,
+          0.8297975070716319,
+          0.0017765065925136982,
+          0.5429233923793604,
+          -0.00013929183923167866,
+          0.4539791588383921,
+          -0.005345385105380647,
+          0.47768786790821505,
+          -0.003922894752845651,
+          0.5851813533779575,
+          -0.00029623950856131264,
+          0.7647061938741762,
+          0.001212930383911526,
+          0.5094463307942716,
+          0.01260483825041209,
+          0.6210103882419582,
+          0.0074668107052974445,
+          1.0802677757187826,
+          0.0016681118292562447,
+          0.36529559746243434,
+          0.0005006278509592532,
+          0.41267977366666453,
+          0.00014880971423531083,
+          0.4126797736666645,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 1,
+            "microseconds_per_call": 2319.7529999379185,
+            "seconds": 0.0023197529999379185
+          },
+          "native_reverse_sweep": {
+            "count": 1,
+            "microseconds_per_call": 674.3750000168802,
+            "seconds": 0.0006743750000168802
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 3074.759999435628,
+            "seconds": 0.003074759999435628
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "gradient_time_value": 1.517307304808726,
+        "scalar_diagnostics": {
+          "envelope_intervals": 25,
+          "integrand_evaluations": 50,
+          "integration_seconds": 0.0008806870000626077,
+          "scalar_passes": 8,
+          "scalar_segments": 34,
+          "topology_seconds": 0.003106578000370064
+        },
+        "scalar_median_seconds": 0.003903807999449782,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 3091.9159999029944,
+            "seconds": 0.0030919159999029944
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 25,
+            "microseconds_per_call": 35.22748000250431,
+            "seconds": 0.0008806870000626077
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "scalar_value": 1.517307304808726,
+        "time_gradient_median_seconds": 0.006279884999457863
+      },
+      "python": {
+        "gradient": [
+          0.33790960331658554,
+          0.015043488629589923,
+          0.597533834037783,
+          0.007210597214474876,
+          0.8297975070716319,
+          0.0017765065925136982,
+          0.5429233923793604,
+          -0.00013929183923167866,
+          0.4539791588383921,
+          -0.005345385105380647,
+          0.47768786790821505,
+          -0.003922894752845651,
+          0.5851813533779575,
+          -0.00029623950856131264,
+          0.7647061938741762,
+          0.001212930383911526,
+          0.5094463307942716,
+          0.01260483825041209,
+          0.6210103882419582,
+          0.0074668107052974445,
+          1.0802677757187826,
+          0.0016681118292562447,
+          0.36529559746243434,
+          0.0005006278509592532,
+          0.41267977366666453,
+          0.00014880971423531083,
+          0.4126797736666645,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 5,
+            "microseconds_per_call": 17.91520007827785,
+            "seconds": 8.957600039138924e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 386,
+            "microseconds_per_call": 0.34025131970649425,
+            "seconds": 0.00013133700940670678
+          },
+          "differentiable_replay_constructions": {
+            "count": 25,
+            "microseconds_per_call": 2.6600399360177107,
+            "seconds": 6.650099840044277e-05
+          },
+          "domain_scan_evaluations": {
+            "count": 386,
+            "microseconds_per_call": 3.860725385828005,
+            "seconds": 0.00149023999892961
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 47,
+            "microseconds_per_call": 7.300234059623611,
+            "seconds": 0.0003431110008023097
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 8,
+            "microseconds_per_call": 9.832499927142635,
+            "seconds": 7.865999941714108e-05
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 8,
+            "microseconds_per_call": 8.81587504864001,
+            "seconds": 7.052700038912008e-05
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 40,
+            "microseconds_per_call": 2.464725071149587,
+            "seconds": 9.858900284598349e-05
+          }
+        },
+        "gradient_time_value": 1.517307304808726,
+        "scalar_diagnostics": {
+          "envelope_intervals": 25,
+          "integrand_evaluations": 50,
+          "integration_seconds": 0.0013066170004094602,
+          "scalar_passes": 8,
+          "scalar_segments": 34,
+          "topology_seconds": 0.007700745999500214
+        },
+        "scalar_median_seconds": 0.008321239999531826,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 5,
+            "microseconds_per_call": 17.394199858244974,
+            "seconds": 8.697099929122487e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 386,
+            "microseconds_per_call": 0.33853626010035903,
+            "seconds": 0.00013067499639873859
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 386,
+            "microseconds_per_call": 3.7648938093528965,
+            "seconds": 0.001453249010410218
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 47,
+            "microseconds_per_call": 6.973595790963798,
+            "seconds": 0.0003277590021752985
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 25,
+            "microseconds_per_call": 52.264680016378406,
+            "seconds": 0.0013066170004094602
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 40,
+            "microseconds_per_call": 2.431024904581136,
+            "seconds": 9.724099618324544e-05
+          }
+        },
+        "scalar_value": 1.517307304808726,
+        "time_gradient_median_seconds": 0.010967663999508659
+      },
+      "raw_parameters": [
+        0.548981252275831,
+        -0.2546599458315449,
+        0.2836479686949551,
+        9.219793674063784,
+        0.1188828974500884,
+        21.01364936260662,
+        0.10919289909956631,
+        -21.06670807024053,
+        0.3801769978058236,
+        -6.919794481623035,
+        0.3023822852631828,
+        -8.476250929726117,
+        0.08924368383244197,
+        -24.31142755480628,
+        0.09866545839481078,
+        20.835542714176366,
+        0.44735354263350713,
+        5.465386025686442,
+        0.25475697936983943,
+        9.115599821800714,
+        0.07394749167663095,
+        27.276281689882605,
+        0.07365286450313002,
+        -20.254763189215026,
+        0.22974101856907803,
+        -8.232875791942428,
+        0.18247855212077502,
+        -4.248123992409504
+      ],
+      "scalar_speedup": 2.1315699954261724,
+      "time_gradient_speedup": 1.7464752938080057,
+      "time_value_absolute_error": 0.0
+    },
+    {
+      "dimension": 16,
+      "maximum_absolute_gradient_error": 0.0,
+      "maximum_relative_gradient_error": 0.0,
+      "name": "cyclic_4x4_s043",
+      "native": {
+        "gradient": [
+          -1.5015170383601648,
+          -0.013068749064704753,
+          0.5702772612049607,
+          -0.16183685670703674,
+          0.2519855835975579,
+          -0.1173185021876082,
+          0.09338777873685568,
+          -0.00030724654245475213,
+          0.4224108201936973,
+          -0.0003153990430147064,
+          0.2572762973897883,
+          -0.023158247624007554,
+          0.25516256374799673,
+          -0.0032208819308284196,
+          0.2551625637479966,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 1,
+            "microseconds_per_call": 1329.9219999680645,
+            "seconds": 0.0013299219999680645
+          },
+          "native_reverse_sweep": {
+            "count": 1,
+            "microseconds_per_call": 484.1390000365209,
+            "seconds": 0.0004841390000365209
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 1428.210000085528,
+            "seconds": 0.001428210000085528
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "gradient_time_value": 1.1697608129855968,
+        "scalar_diagnostics": {
+          "envelope_intervals": 14,
+          "integrand_evaluations": 28,
+          "integration_seconds": 0.000107240999568603,
+          "scalar_passes": 2,
+          "scalar_segments": 15,
+          "topology_seconds": 0.001426939000339189
+        },
+        "scalar_median_seconds": 0.0015122070008146693,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 1418.7360002324567,
+            "seconds": 0.0014187360002324567
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 14,
+            "microseconds_per_call": 7.660071397757357,
+            "seconds": 0.000107240999568603
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "scalar_value": 1.1697608129855963,
+        "time_gradient_median_seconds": 0.0031637839992981753
+      },
+      "python": {
+        "gradient": [
+          -1.5015170383601648,
+          -0.013068749064704753,
+          0.5702772612049607,
+          -0.16183685670703674,
+          0.2519855835975579,
+          -0.1173185021876082,
+          0.09338777873685568,
+          -0.00030724654245475213,
+          0.4224108201936973,
+          -0.0003153990430147064,
+          0.2572762973897883,
+          -0.023158247624007554,
+          0.25516256374799673,
+          -0.0032208819308284196,
+          0.2551625637479966,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 2,
+            "microseconds_per_call": 17.871500403998652,
+            "seconds": 3.5743000807997305e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 0.3093155454143484,
+            "seconds": 0.00012743800471071154
+          },
+          "differentiable_replay_constructions": {
+            "count": 14,
+            "microseconds_per_call": 2.311357028312549,
+            "seconds": 3.235899839637568e-05
+          },
+          "domain_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 1.8026747683798374,
+            "seconds": 0.000742702004572493
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 11,
+            "microseconds_per_call": 4.638909227982037,
+            "seconds": 5.10280015078024e-05
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 2,
+            "microseconds_per_call": 24.911999844334787,
+            "seconds": 4.9823999688669574e-05
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 2,
+            "microseconds_per_call": 17.666499388724333,
+            "seconds": 3.5332998777448665e-05
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 16,
+            "microseconds_per_call": 2.312999981768371,
+            "seconds": 3.700799970829394e-05
+          }
+        },
+        "gradient_time_value": 1.1697608129855968,
+        "scalar_diagnostics": {
+          "envelope_intervals": 14,
+          "integrand_evaluations": 28,
+          "integration_seconds": 0.00016287499965983443,
+          "scalar_passes": 2,
+          "scalar_segments": 15,
+          "topology_seconds": 0.003518357999382715
+        },
+        "scalar_median_seconds": 0.0033766050000849646,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 2,
+            "microseconds_per_call": 17.656000181887066,
+            "seconds": 3.531200036377413e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 0.3582232918754758,
+            "seconds": 0.00014758799625269603
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 1.8982354362979272,
+            "seconds": 0.000782072999754746
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 11,
+            "microseconds_per_call": 4.574181895639578,
+            "seconds": 5.031600085203536e-05
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 14,
+            "microseconds_per_call": 11.633928547131031,
+            "seconds": 0.00016287499965983443
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 16,
+            "microseconds_per_call": 2.204562576935132,
+            "seconds": 3.527300123096211e-05
+          }
+        },
+        "scalar_value": 1.1697608129855963,
+        "time_gradient_median_seconds": 0.005320911999660893
+      },
+      "raw_parameters": [
+        0.08126801850074697,
+        11.045276814008783,
+        1.0063825236717352,
+        -1.8381764249492882,
+        0.8692557054878776,
+        0.1411204317247734,
+        0.003933732873119489,
+        2.171676719195487,
+        0.004038110807512485,
+        -2.0408645964912226,
+        0.34755720612934793,
+        0.0733824692387409,
+        0.917080527235651,
+        0.4414645135315198,
+        0.19287814076993204,
+        4.089530774660171
+      ],
+      "scalar_speedup": 2.2328986694717656,
+      "time_gradient_speedup": 1.6818189866442321,
+      "time_value_absolute_error": 0.0
+    },
+    {
+      "dimension": 16,
+      "maximum_absolute_gradient_error": 0.0,
+      "maximum_relative_gradient_error": 0.0,
+      "name": "cyclic_4x4_s101",
+      "native": {
+        "gradient": [
+          -1.5015170383601648,
+          -0.013068749064704753,
+          0.5702772612049607,
+          -0.16183685670703674,
+          0.2519855835975579,
+          -0.1173185021876082,
+          0.09338777873685568,
+          -0.00030724654245475213,
+          0.4224108201936973,
+          -0.0003153990430147064,
+          0.2572762973897883,
+          -0.023158247624007554,
+          0.25516256374799673,
+          -0.0032208819308284196,
+          0.2551625637479966,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 1,
+            "microseconds_per_call": 1338.2249999267515,
+            "seconds": 0.0013382249999267515
+          },
+          "native_reverse_sweep": {
+            "count": 1,
+            "microseconds_per_call": 466.27200026705395,
+            "seconds": 0.00046627200026705395
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 1373.8389998252387,
+            "seconds": 0.0013738389998252387
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "gradient_time_value": 1.1697608129855968,
+        "scalar_diagnostics": {
+          "envelope_intervals": 14,
+          "integrand_evaluations": 28,
+          "integration_seconds": 0.00010500900043552974,
+          "scalar_passes": 2,
+          "scalar_segments": 15,
+          "topology_seconds": 0.0013650649998453446
+        },
+        "scalar_median_seconds": 0.0014900539999871398,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "crossing_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 1,
+            "microseconds_per_call": 1356.7519999924116,
+            "seconds": 0.0013567519999924116
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 14,
+            "microseconds_per_call": 7.500642888252124,
+            "seconds": 0.00010500900043552974
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          }
+        },
+        "scalar_value": 1.1697608129855963,
+        "time_gradient_median_seconds": 0.0032003389997043996
+      },
+      "python": {
+        "gradient": [
+          -1.5015170383601648,
+          -0.013068749064704753,
+          0.5702772612049607,
+          -0.16183685670703674,
+          0.2519855835975579,
+          -0.1173185021876082,
+          0.09338777873685568,
+          -0.00030724654245475213,
+          0.4224108201936973,
+          -0.0003153990430147064,
+          0.2572762973897883,
+          -0.023158247624007554,
+          0.25516256374799673,
+          -0.0032208819308284196,
+          0.2551625637479966,
+          0.0
+        ],
+        "gradient_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 2,
+            "microseconds_per_call": 17.942499653145205,
+            "seconds": 3.588499930629041e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 0.31330093353742605,
+            "seconds": 0.00012907998461741954
+          },
+          "differentiable_replay_constructions": {
+            "count": 14,
+            "microseconds_per_call": 2.2255000138622045,
+            "seconds": 3.115700019407086e-05
+          },
+          "domain_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 1.8472257460354775,
+            "seconds": 0.0007610570073666167
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 11,
+            "microseconds_per_call": 4.6013637984287925,
+            "seconds": 5.061500178271672e-05
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 2,
+            "microseconds_per_call": 24.52199987601489,
+            "seconds": 4.9043999752029777e-05
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 2,
+            "microseconds_per_call": 16.279499959637178,
+            "seconds": 3.2558999919274356e-05
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 16,
+            "microseconds_per_call": 2.23325002934871,
+            "seconds": 3.573200046957936e-05
+          }
+        },
+        "gradient_time_value": 1.1697608129855968,
+        "scalar_diagnostics": {
+          "envelope_intervals": 14,
+          "integrand_evaluations": 28,
+          "integration_seconds": 0.0001769660002537421,
+          "scalar_passes": 2,
+          "scalar_segments": 15,
+          "topology_seconds": 0.003467409999757365
+        },
+        "scalar_median_seconds": 0.0034187480005130055,
+        "scalar_phase_profiler": {
+          "anchor_witness_scans": {
+            "count": 2,
+            "microseconds_per_call": 17.240499801118858,
+            "seconds": 3.4480999602237716e-05
+          },
+          "crossing_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 0.31923788095439004,
+            "seconds": 0.0001315260069532087
+          },
+          "differentiable_replay_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "domain_scan_evaluations": {
+            "count": 412,
+            "microseconds_per_call": 1.8654466026260017,
+            "seconds": 0.0007685640002819127
+          },
+          "emitted_scalar_segment_constructions": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "envelope_overlap_evaluations": {
+            "count": 11,
+            "microseconds_per_call": 4.583272708590481,
+            "seconds": 5.041599979449529e-05
+          },
+          "interior_prefix_time_evaluations": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_promotion": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_reverse_sweep": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "native_scalar_profile_build": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "reverse_sweep_time": {
+            "count": 0,
+            "microseconds_per_call": 0.0,
+            "seconds": 0.0
+          },
+          "scalar_time_integration": {
+            "count": 14,
+            "microseconds_per_call": 12.640428589553007,
+            "seconds": 0.0001769660002537421
+          },
+          "temporary_scalar_segment_constructions": {
+            "count": 16,
+            "microseconds_per_call": 2.3799375412636437,
+            "seconds": 3.80790006602183e-05
+          }
+        },
+        "scalar_value": 1.1697608129855963,
+        "time_gradient_median_seconds": 0.005291327000122692
+      },
+      "raw_parameters": [
+        0.08126801850074697,
+        11.045276814008783,
+        1.0063825236717352,
+        -1.8381764249492882,
+        0.8692557054878776,
+        0.1411204317247734,
+        0.003933732873119489,
+        2.171676719195487,
+        0.004038110807512485,
+        -2.0408645964912226,
+        0.34755720612934793,
+        0.0733824692387409,
+        0.917080527235651,
+        0.4414645135315198,
+        0.19287814076993204,
+        4.089530774660171
+      ],
+      "scalar_speedup": 2.2943785933546783,
+      "time_gradient_speedup": 1.6533645343857095,
+      "time_value_absolute_error": 0.0
+    }
+  ],
+  "profile": "core",
+  "schema_version": 1,
+  "status": "complete"
+}

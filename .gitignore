@@ -1,0 +1,33 @@
+# Python caches / test state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Native/compiler outputs (rebuild with `make native`)
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+
+# Generated benchmark runs. The compact reference campaign is tracked.
+benchmark_results/runs/
+benchmark_results/tmp/
+**/.components/
+
+# Expensive Red Comet research scratch state. The compact release result lives
+# in analysis/red_comet_2017/ and is intentionally tracked.
+analysis/red_comet_dd_yaw_v1/
+**/active_basis_work/
+
+# Runtime outputs / logs
+*.log
+planner_comparison.png
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+*Zone.Identifier*

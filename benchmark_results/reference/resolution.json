@@ -1,0 +1,240 @@
+{
+  "aggregate": {
+    "cases": 2,
+    "certified_pairs": 0,
+    "maximum_absolute_relative_time_difference": null,
+    "maximum_initial_position_prolongation_error": 1.88411095042053e-15,
+    "median_absolute_relative_time_difference": null,
+    "median_runtime_ratio_2N_over_N": null
+  },
+  "benchmark": "resolution",
+  "environment": {
+    "active_reverse_backend": "native",
+    "casadi": "3.7.2",
+    "compilers": {
+      "cc": "cc (Debian 14.2.0-19) 14.2.0",
+      "cxx": "c++ (Debian 14.2.0-19) 14.2.0"
+    },
+    "cpu": {
+      "logical_count": 5,
+      "model": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "ipopt_plugin": "not_probed",
+    "native_artifacts": [
+      {
+        "exists": true,
+        "path": "native/cflow/libcflow.so",
+        "sha256": "7ae5d226aded2e5325b52e0cdf96d9f340c9fb3955000fa45218d331c7482dbe"
+      },
+      {
+        "exists": true,
+        "path": "native/reverse_eta/libreverse_eta.so",
+        "sha256": "8ead731e102e7b4521b0a331624b279a2331ef749466d3199809b3ccf841e941"
+      },
+      {
+        "exists": true,
+        "path": "native/segment/libame_segment.so",
+        "sha256": "c4efd842311ce1a54c65c693690b124c1ad072107be13085c9f71149c0aa342d"
+      },
+      {
+        "exists": true,
+        "path": "native/crossing/libame_crossing.so",
+        "sha256": "5fe7fa84fbae90414628cce78b8745a1a37bc1de228df382cfd09bbedee296d8"
+      },
+      {
+        "exists": true,
+        "path": "native/reverse/libame_reverse.so",
+        "sha256": "4df1c65b03a1db34503674e418c2bde3f4f5283d9fc2628f2bfa72a9fc474bbf"
+      }
+    ],
+    "numpy": "2.3.5",
+    "optimization_config": {
+      "body_height": 0.4444444444444444,
+      "body_length": 0.5555555555555556,
+      "class_time_pilot_iterations": 6,
+      "corridor_mode": "overlapping_cover",
+      "curvature_iterations": 20,
+      "curvature_regularization": 0.0,
+      "curvature_slope_limit": 50.0,
+      "domain_scan": 32,
+      "envelope_scan": 16,
+      "feasibility_tolerance": 2e-07,
+      "geometry_refinement": 1,
+      "init_w": 0.8,
+      "length_curvature_regularization": 1e-05,
+      "length_iterations": 20,
+      "maximum_exchange_rounds": 3,
+      "n_scan": 32,
+      "time_iterations": 20
+    },
+    "os": {
+      "machine": "x86_64",
+      "release": "6.18.35",
+      "system": "Linux",
+      "version": "#1 SMP Mon Aug 31 18:10:37 UTC 2026"
+    },
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "provenance": {
+      "git_branch": null,
+      "git_commit": null,
+      "git_dirty": null,
+      "imported_source_archive_sha256": "b284fb1d3bb219b183aca9b3bda8f2de8cb6ed2072b188c93dd01137d250c496",
+      "source_kind": "tree_sha256",
+      "source_tree_sha256": "19c2fbf7a37b4912bf5d2f9bc40b7e109bfa80e89bc7b9e003077853ed8309d6"
+    },
+    "python": {
+      "executable": "/opt/pyvenv/bin/python",
+      "implementation": "CPython",
+      "version": "3.13.5"
+    },
+    "scipy": "1.17.0",
+    "thread_environment": {},
+    "timestamp_utc": "2026-09-03T23:00:27.693343+00:00"
+  },
+  "profile": "core",
+  "rows": [
+    {
+      "2N": {
+        "certified": true,
+        "corridor_upper_bound": -1.4507632945193194e-05,
+        "curvature_energy": 3.9275357731766793,
+        "endpoint_error": 3.210470556069822e-09,
+        "error": null,
+        "exchange_rounds": 1,
+        "execution_status": "success",
+        "iterations": 16,
+        "segments": 22,
+        "solver_message": "finite NLP left an existing generated constraint violated",
+        "solver_success": false,
+        "time": 1.2224987214570127,
+        "wall_seconds": 0.7146026070004154
+      },
+      "2N_parameters": [
+        0.26833365558883876,
+        0.2843328379674784,
+        0.5366673111776773,
+        0.5746384479848692,
+        0.7069776203916154,
+        1.2973016907510089,
+        0.877574312060153,
+        2.055552225738722,
+        0.8842171528703792,
+        2.201434845983554,
+        0.8908599936806053,
+        2.124583407453298,
+        0.8980311121209603,
+        2.106967090970864,
+        0.9052022305613153,
+        1.8242095803580431,
+        1.120552318846672,
+        1.4183000411667388,
+        1.3359024071320278,
+        1.0593052312776954,
+        1.9016946727589947,
+        0.15769330404181026,
+        2.4674869383859623,
+        -0.6293804328238455,
+        2.567548711008683,
+        -1.0807395698060587,
+        2.6676104836314036,
+        -1.5797544996454322,
+        2.677116645781682,
+        -2.0293967094177416,
+        2.686622807931961,
+        -2.4605561991764886,
+        2.6915807295951204,
+        -2.6916073521709802,
+        2.6965386512582796,
+        -2.788157686548276,
+        2.8485262574411943,
+        -2.1810012350770775,
+        3.0005138636241093,
+        -1.2896706381649194,
+        3.0625076475553716,
+        -0.7275493987986451,
+        3.124501431486634,
+        -0.1955458005350737
+      ],
+      "N": {
+        "certified": false,
+        "corridor_upper_bound": null,
+        "curvature_energy": null,
+        "endpoint_error": null,
+        "error": "ValueError: native reverse scalar_build failed: topology_failure: scalar_build_create: internal cap anchors exhausted",
+        "exchange_rounds": 0,
+        "execution_status": "internal_cap",
+        "iterations": 0,
+        "segments": 11,
+        "solver_message": null,
+        "solver_success": false,
+        "time": null,
+        "wall_seconds": 1.2019181740006388
+      },
+      "N_parameters": null,
+      "absolute_time_difference_2N_minus_N": null,
+      "curvature_energy_difference_2N_minus_N": null,
+      "initial_prolongation_identity": {
+        "curvature_energy_error": 0.0,
+        "maximum_curvature_error": 9.325873406851315e-15,
+        "maximum_heading_error": 3.3306690738754696e-16,
+        "maximum_position_error": 9.930136612989092e-16
+      },
+      "name": "cyclic_4x4_s007",
+      "relative_time_difference_2N_minus_N": null,
+      "runtime_ratio_2N_over_N": null
+    },
+    {
+      "2N": {
+        "certified": false,
+        "corridor_upper_bound": null,
+        "curvature_energy": null,
+        "endpoint_error": null,
+        "error": "ValueError: native reverse scalar_build failed: topology_failure: scalar_build_create: internal cap anchors exhausted",
+        "exchange_rounds": 0,
+        "execution_status": "internal_cap",
+        "iterations": 0,
+        "segments": 28,
+        "solver_message": null,
+        "solver_success": false,
+        "time": null,
+        "wall_seconds": 0.8546658159993967
+      },
+      "2N_parameters": null,
+      "N": {
+        "certified": false,
+        "corridor_upper_bound": null,
+        "curvature_energy": null,
+        "endpoint_error": null,
+        "error": "ValueError: native reverse scalar_build failed: topology_failure: scalar_build_create: internal cap anchors exhausted",
+        "exchange_rounds": 0,
+        "execution_status": "internal_cap",
+        "iterations": 0,
+        "segments": 14,
+        "solver_message": null,
+        "solver_success": false,
+        "time": null,
+        "wall_seconds": 0.5551021569999648
+      },
+      "N_parameters": null,
+      "absolute_time_difference_2N_minus_N": null,
+      "curvature_energy_difference_2N_minus_N": null,
+      "initial_prolongation_identity": {
+        "curvature_energy_error": 3.552713678800501e-15,
+        "maximum_curvature_error": 6.661338147750939e-15,
+        "maximum_heading_error": 1.3322676295501878e-15,
+        "maximum_position_error": 1.88411095042053e-15
+      },
+      "name": "cyclic_4x4_s019",
+      "relative_time_difference_2N_minus_N": null,
+      "runtime_ratio_2N_over_N": null
+    }
+  ],
+  "schema_version": 1,
+  "settings": {
+    "fixed_stations": true,
+    "note": "2N is an exact geometric prolongation of the same starting curve; station coordinates are fixed so the benchmark isolates curvature-resolution sensitivity.",
+    "optimization_iterations_per_level": 16,
+    "refinement_factor": 2
+  },
+  "status": "complete"
+}
