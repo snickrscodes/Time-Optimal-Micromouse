@@ -98,7 +98,7 @@ The ablation holds the final time-optimization budget and certification policy f
 | cyclic_4x4_s019 | curvature_then_time | False | n/a | 13.861 | None | None | None |
 | cyclic_4x4_s019 | production_warm_start | True | 1.5173073 | 1.554 | 20 | 77 | time_projection |
 
-![Warm-start ablation](plots/warm_start.png)
+![Warm-start certification and wall-time ablation](plots/warm_start.png)
 
 ## Benchmark 5 — Native C/C++ stack performance and equivalence
 
@@ -110,7 +110,12 @@ Median scalar speedup is **2.18×** and median time+gradient speedup is **1.71×
 
 Exact N→2N prolongation has maximum initial position error **1.884e-15**. **0/2** fixed-station pairs remained certified after both optimizations; only those pairs enter time-sensitivity aggregates.
 
-![N vs 2N resolution sensitivity](plots/resolution.png)
+| route | N segments | N outcome | N T (s) | 2N segments | 2N outcome | 2N T (s) | exact prolongation max position error |
+|---|---:|---|---:|---:|---|---:|---:|
+| cyclic_4x4_s007 | 11 | internal cap | n/a | 22 | certified | 1.2224987 | 9.930e-16 |
+| cyclic_4x4_s019 | 14 | internal cap | n/a | 28 | internal cap | n/a | 1.884e-15 |
+
+![Resolution reoptimization outcomes](plots/resolution.png)
 
 ## Benchmark 7 — Fixed-geometry direct-transcription baseline
 

@@ -148,9 +148,9 @@ The complete-optimizer speedup is intentionally reported separately from much la
 
 The benchmark performs exact `N → 2N` prolongation before reoptimization. Exact prolongation preserves the continuous curve to floating-point precision; the measured maximum initial position error in the reference campaign is about `1.88e-15`.
 
-The independent higher-resolution local solves do **not** produce a simple monotone quality story: some runs lose certification or enter different basins. For that reason the release interpretation separates “representation refinement” from “optimizer robustness.”
+The independent higher-resolution local solves do **not** produce a simple monotone quality story. In the checked campaign, `s007` fails at `N` with an internal-cap condition but certifies at `2N` at **1.222499 s**, while `s019` reaches the internal-cap condition at both `N` and `2N`. There are therefore **0/2 certified N/2N pairs** from which to report a paired time difference. The benchmark still establishes exact geometric prolongation to floating-point precision and, importantly, exposes optimizer/certification sensitivity instead of hiding failed solves.
 
-Benchmark 8 later adds a stronger controlled multilevel refinement on one case.
+For that reason the release interpretation separates “representation refinement” from “optimizer robustness.” Benchmark 8 later adds a stronger controlled multilevel refinement on one case.
 
 ## Benchmark 7 — fixed-geometry direct transcription
 

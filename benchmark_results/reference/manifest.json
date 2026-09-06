@@ -78,7 +78,7 @@
   "profile": "all",
   "reference_run": true,
   "report": "benchmark_results/reference/BENCHMARK_REPORT.md",
-  "report_sha256": "ca0bb901710e26e0d80fbfba811f40b498971e5e65cced3aeefe173eb5734800",
+  "report_sha256": "533e57f1ae40a76a438eb4f510550827e99a6c71c4166d410788beed0b6c75e2",
   "requested_suites": [],
   "resolved_suites": [
     "topology_search",

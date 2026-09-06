@@ -270,7 +270,7 @@ def generate(results_dir: Path, report_path: Path, plots_dir: Path) -> str:
             )
         link = _plot_link(report_path, plots_dir, "warm_start")
         if link:
-            lines += ["", f"![Warm-start ablation]({link})", ""]
+            lines += ["", f"![Warm-start certification and wall-time ablation]({link})", ""]
 
     if native:
         a = native["aggregate"]
@@ -291,10 +291,22 @@ def generate(results_dir: Path, report_path: Path, plots_dir: Path) -> str:
             "",
             f"Exact N→2N prolongation has maximum initial position error **{_f(a['maximum_initial_position_prolongation_error'])}**. **{a['certified_pairs']}/{a['cases']}** fixed-station pairs remained certified after both optimizations; only those pairs enter time-sensitivity aggregates.",
             "",
+            "| route | N segments | N outcome | N T (s) | 2N segments | 2N outcome | 2N T (s) | exact prolongation max position error |",
+            "|---|---:|---|---:|---:|---|---:|---:|",
         ]
+        for row in resolution["rows"]:
+            n = row["N"]
+            n2 = row["2N"]
+            n_outcome = "certified" if n["certified"] else str(n.get("execution_status") or "failed").replace("_", " ")
+            n2_outcome = "certified" if n2["certified"] else str(n2.get("execution_status") or "failed").replace("_", " ")
+            pos_err = row["initial_prolongation_identity"]["maximum_position_error"]
+            lines.append(
+                f"| {row['name']} | {n['segments']} | {n_outcome} | {_f(n.get('time'),7)} | {n2['segments']} | {n2_outcome} | {_f(n2.get('time'),7)} | {_f(pos_err)} |"
+            )
+        lines += [""]
         link = _plot_link(report_path, plots_dir, "resolution")
         if link:
-            lines += [f"![N vs 2N resolution sensitivity]({link})", ""]
+            lines += [f"![Resolution reoptimization outcomes]({link})", ""]
 
     if direct:
         a = direct["aggregate"]
