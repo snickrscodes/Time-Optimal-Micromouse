@@ -10,21 +10,24 @@ The project combines discrete maze search with continuous optimal-control machin
 
 ## Red Comet 2017 case study
 
-The historical Red Comet maze is included as a held-out case study. Under the frozen `red_comet_2017_dd_yaw_v1` model:
+Red Comet was a championship Micromouse robot whose 2017 winning run became known for taking a deliberately longer route to preserve speed through the maze. That result was one of the original motivations for this project. I used the historical maze as a held-out case study under the frozen `red_comet_2017_dd_yaw_v1` model:
 
-| Topology | Grid steps | Optimized time |
-|---|---:|---:|
-| **Shortest/A\*** | **99** | **7.744675 s** |
-| Historical Red Comet route | 121 | 8.666065 s |
-| Best other simple topology | 103 | 8.176914 s |
-
-The corrected historical topology is **0.921 s (11.9%) slower** than the final A* trajectory in this model. Exhaustive search evaluated all **10 simple start-to-goal junction topologies** admitted by the no-revisit search policy; none beat A*. A final overlay audit selected a nearby 121-step prefix variant as the correct historical-green transcription.
+| Topology                   | Grid steps | Optimized time |
+| -------------------------- | ---------: | -------------: |
+| **Shortest/A***            |     **99** | **7.744675 s** |
+| Historical Red Comet route |        121 |     8.666065 s |
+| Best other simple topology |        103 |     8.176914 s |
 
 <p align="center">
-  <img src="assets/red_comet/red_comet_astar_vs_historical.svg" alt="A star versus historical Red Comet topology" width="900">
+  <img src="assets/red_comet/red_comet_astar_vs_green_side_by_side.gif"
+       alt="Optimized A* route racing the historical Red Comet route">
 </p>
 
-The result is a certified best solution found by the continuous optimizer on the winning topology; it is not a mathematical proof of the global continuous optimum. See [`docs/RED_COMET_CASE_STUDY.md`](docs/RED_COMET_CASE_STUDY.md) for scope and provenance.
+Under this model, the result **reverses the motivating narrative**: the continuously optimized shortest-distance A* topology finishes **0.921 s (11.9%) faster** than the corrected historical route. Exhaustive search evaluated all **10 simple start-to-goal junction topologies** admitted by the no-revisit policy; none beat A*.
+
+This does not imply that Red Comet's real-world 2017 strategy was wrong: the historical robot had sensing, control, suction, load-transfer, and race-day effects that are not fully represented by the calibrated model. The result instead illustrates how strongly the time-optimal topology depends on the physical assumptions.
+
+The reported trajectory is a certified best solution found by the continuous optimizer on the winning topology, not a proof of the global continuous optimum. See [`docs/RED_COMET_CASE_STUDY.md`](docs/RED_COMET_CASE_STUDY.md) for the full calibration, transcription, search, certification, and provenance.
 
 ## System
 
