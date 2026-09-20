@@ -27,7 +27,11 @@ Under this model, the result **reverses the motivating narrative**: the continuo
 
 This does not imply that Red Comet's real-world 2017 strategy was wrong: the historical robot had sensing, control, suction, load-transfer, and race-day effects that are not fully represented by the calibrated model. The result instead illustrates how strongly the time-optimal topology depends on the physical assumptions.
 
-The reported trajectory is a certified best solution found by the continuous optimizer on the winning topology, not a proof of the global continuous optimum. See [`docs/RED_COMET_CASE_STUDY.md`](docs/RED_COMET_CASE_STUDY.md) for the full calibration, transcription, search, certification, and provenance.
+The reported trajectory is a certified best solution found by the continuous optimizer on the winning topology, not a proof of the global continuous optimum. 
+
+**External discussion:** [Reddit thread on the Red Comet experiment — 33K+ views](https://www.reddit.com/r/robotics/comments/1wadkyo/i_built_a_timeoptimal_micromouse_planner_to_beat/)
+
+See [`docs/RED_COMET_CASE_STUDY.md`](docs/RED_COMET_CASE_STUDY.md) for the full calibration, transcription, search, certification, and provenance.
 
 ## System
 
